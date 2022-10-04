@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
+import br.edu.ifgoiano.entidade.Livro;
 import br.edu.ifgoiano.servico.LivroService;
 import br.edu.ifgoiano.servico.LivroServiceImpl;
 
@@ -20,6 +20,15 @@ public class LivroController{
 	public String listarLivros(Model model){
 		model.addAttribute("livros", livroServiceImpl.listarLivros());
 		return "listar-livros";	
+	}
+	
+	@GetMapping("/livros/novo")
+	public String abrirNovoLivro(Model model) {
+		Livro livro = new Livro();
+		
+		model.addAttribute("livro", livro);
+		
+		return "inserir-livro";
 	}
 
 }
