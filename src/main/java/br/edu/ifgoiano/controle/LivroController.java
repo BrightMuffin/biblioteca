@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import br.edu.ifgoiano.entidade.Livro;
 import br.edu.ifgoiano.servico.LivroService;
 import br.edu.ifgoiano.servico.LivroServiceImpl;
-import br.edu.ifgoiano.repositorio.LivroRepositorio;
-import br.edu.ifgoiano.BibliotecaApplication;
+
 
 @Controller
 public class LivroController{
