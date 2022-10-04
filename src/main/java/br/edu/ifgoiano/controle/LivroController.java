@@ -1,6 +1,7 @@
 package br.edu.ifgoiano.controle;
 
 import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import br.edu.ifgoiano.entidade.Livro;
 import br.edu.ifgoiano.servico.LivroService;
 import br.edu.ifgoiano.servico.LivroServiceImpl;
+import br.edu.ifgoiano.repositorio.LivroRepositorio;
+import br.edu.ifgoiano.BibliotecaApplication;
 
 @Controller
 public class LivroController{
@@ -34,7 +37,6 @@ public class LivroController{
 	
 	@PostMapping("/livros/inserir")
 	public String inserirLivro(Livro livro) {
-		//inserir livro no banco de dados
 		
 		return "redirect:/livros";
 	}

@@ -25,4 +25,10 @@ public class LivroServiceImpl implements LivroService{
 		return livroRepository.findAll();
 	}
 
+
+	@Override
+	public void inserir(Livro livro) {
+		this.livroRepository.save(livro);
+	}
+
 }
