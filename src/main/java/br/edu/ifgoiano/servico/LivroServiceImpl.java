@@ -31,4 +31,16 @@ public class LivroServiceImpl implements LivroService{
 		this.livroRepository.save(livro);
 	}
 
+
+	@Override
+	public Livro obterLivro(Long id) {
+		return this.livroRepository.getReferenceById(id);
+	}
+
+
+	@Override
+	public void alterarLivro(Livro livro) {
+		this.livroRepository.save(livro);
+	}
+
 }
